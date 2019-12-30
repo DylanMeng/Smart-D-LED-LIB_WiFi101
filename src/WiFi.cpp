@@ -575,14 +575,14 @@ uint8_t WiFiClass::beginProvision(uint8_t channel)
 		// failed, enter provisioning mode
 
 		uint8_t mac[6];
-		char provSsid[13];
+		char provSsid[17];
 
 		// get MAC address for provisioning SSID
 		macAddress(mac);
-		sprintf(provSsid, "wifi101-%.2X%.2X", mac[1], mac[0]);
+		sprintf(provSsid, "Smart-D-LED-%.2X%.2X", mac[1], mac[0]);
 
 		// start provisioning mode
-		startProvision(provSsid, "wifi101", channel);
+		startProvision(provSsid, "Smart-D-LED", channel);
 	}
 
 	return status();
